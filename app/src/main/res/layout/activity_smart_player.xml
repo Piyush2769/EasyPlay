@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentRelative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SmartPlayerActivity">
+
+    <RelativeLayout
+        android:id="@+id/upper"
+        android:layout_width="match_parent"
+        android:layout_height="330dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="270dp" />
+
+        <TextView
+            android:id="@+id/songName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textStyle="italic|bold"
+            android:textColor="#000"
+            android:textSize="25dp"
+            android:layout_marginTop="7dp"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:ellipsize="marquee"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/lower"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/previousBtn"
+            android:src="@drawable/previous"
+            android:layout_marginRight="30dp"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <ImageView
+            android:id="@+id/playPauseBtn"
+            android:src="@drawable/pause"
+            android:visibility="invisible"
+            android:layout_toEndOf="@id/previousBtn"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <ImageView
+            android:id="@+id/nextBtn"
+            android:src="@drawable/next"
+            android:visibility="invisible"
+            android:layout_toEndOf="@id/playPauseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/voice_enabled"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+        android:text="Voice Enabled Mode- ON"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:textSize="16dp"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
