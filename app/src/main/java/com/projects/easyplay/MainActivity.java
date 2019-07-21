@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void appStoragePermission() {
+
+        File file;
         Dexter.withActivity(this)
                 .withPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
                 .withListener(new PermissionListener() {
@@ -61,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void checking()
     {
-        
+        File[] allFiles;
     }
 
     public ArrayList<File> readOnlyAudio(File file) {
