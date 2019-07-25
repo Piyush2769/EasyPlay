@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     public void appStoragePermission() {
 
         File file;
+        File file2;
+        File file3;
         Dexter.withActivity(this)
                 .withPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
                 .withListener(new PermissionListener() {
